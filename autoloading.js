@@ -15,7 +15,9 @@ Autoloading = function(base, options){
 
 Autoloading.defaults = {
   title: 'Loading',
-  state: ''
+  state: '',
+  width: null,
+  top: null
 };
 
 Autoloading.prototype.buildPopup = function() {
@@ -29,8 +31,8 @@ Autoloading.prototype.render = function(title, state) {
   this.title.text(title || this.options.title);
   this.state.text(state || this.options.state);
   this.popup
-    .css('width', this.base.width())
-    .css('top'  , parseInt(this.base.height()/2) - 20 + 'px');
+    .css('width', this.options.width || this.base.width())
+    .css('top'  , this.options.top || parseInt(this.base.height()/2) - 20 + 'px');
 }
 
 Autoloading.prototype.start = function(title, state) {
