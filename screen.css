@@ -1,0 +1,1078 @@
+/*****************************************************************************/
+/*
+/* Common
+/*
+/*****************************************************************************/
+
+/* Global Reset */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: white;
+  font: 13.34px helvetica, arial, clean, sans-serif;
+  *font-size: small;
+  text-align: center;
+}
+
+table {
+  font-size: inherit;
+  font: 100%;
+}
+
+select,
+input,
+textarea {
+  font: 99% helvetica, arial, sans-serif;
+}
+
+input.text {
+  padding: 1px 0;
+}
+
+optgroup {
+  margin-top: .5em;
+}
+
+pre,
+code {
+  font: 115% Monaco, "Courier New", monospace;
+  *font-size: 100%;
+}
+
+body * {
+  line-height: 1.4em;
+}
+
+img {
+  border: 0;
+}
+
+/* links */
+
+a {
+  color: #4183c4; /* blue */
+  text-decoration: none;
+}
+
+a.action {
+  color: #d00; /* red */
+  text-decoration: underline;
+}
+
+a.action span {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.clear {
+  clear: both;
+}
+
+.sparkline {
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+
+img.help {
+  vertical-align: middle;
+}
+
+.notification {
+  background: #FFFBE2 none repeat scroll 0%;
+  border: 1px solid #FFE222;
+  padding: 1em;
+  margin: 1em;
+  font-weight: bold;
+}
+
+.error_box {
+  background: #FFEBE8 none repeat scroll 0%;
+  border: 1px solid #DD3C10;
+  padding: 1em;
+  font-weight: bold;
+}
+
+abbr {
+  border-bottom: none;
+}
+
+/*****************************************************************************/
+/*
+/* Common Layout
+/*
+/*****************************************************************************/
+
+body {
+  text-align: center;
+}
+
+.site {
+  margin: 0 auto;
+  padding: 0 3em;
+  text-align: left;
+  overflow: hidden;
+  min-width: 60em;
+}
+
+/*****************************************************************************/
+/*
+/* Main
+/*
+/*****************************************************************************/
+
+#main {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -8.6em;
+}
+
+.push {
+  height: 8.6em;
+  padding-bottom: 4em;
+}
+
+/*****************************************************************************/
+/*
+/* Header
+/*
+/*****************************************************************************/
+
+#header {
+  background: #fcfcfc url(/images/modules/header/header_bg.png) 0 100% repeat-x;
+  height: 4em;
+  border-bottom: 5px solid #ddd;
+}
+
+  #header a {
+    text-decoration: underline;
+  }
+
+  #header a:hover {
+    color: black;
+  }
+
+  #header .logo {
+    padding-top: 1.2em;
+    float: left;
+  }
+
+  #header .actions {
+    padding-top: 1.2em;
+    float: right;
+    color: #888;
+  }
+
+    #header .actions * {
+      vertical-align: middle;
+    }
+
+    #header .actions img.gravatar {
+      border: 1px solid #d0d0d0; /* gray */
+      padding: 1px;
+      background-color: white;
+    }
+
+    #header .actions a {
+      margin-left: 1.5em;
+    }
+
+      #header .actions span a {
+        margin-left: 0;
+        text-decoration: none;
+        font-size: 120%;
+        font-weight: bold;
+        color: black;
+      }
+
+/*****************************************************************************/
+/*
+/* Gist Layout
+/*
+/*****************************************************************************/
+
+#gist_data {
+  margin-top: 1em;
+  float: left;
+  width: 70%;
+  margin-right: 2%;
+  min-width: 40em;
+}
+
+  #gist_data h2 {
+    margin-bottom: .6em;
+  }
+
+#gist_meta {
+  float: left;
+  width: 28%;
+  margin-top: 1em;
+}
+
+#delete_link {
+  float: right;
+  text-align: right;
+}
+
+  #delete_link a {
+    font-size: 90%;
+    color: #d00;
+    text-decoration: underline;
+  }
+
+#deleted_message {
+  font-size: 200%;
+  color: #d44;
+  margin: 30px;
+  text-align: center;
+}
+
+.warning {
+  padding: 10px;
+  color: #833;
+  border: 1px solid #833;
+  background: #fee;
+  margin-bottom: 10px;
+}
+/*****************************************************************************/
+/*
+/* Repos
+/*
+/*****************************************************************************/
+
+#repos {
+  margin-bottom: 1em;
+}
+
+#repos h1 {
+  font-size: 160%;
+}
+
+  #repos h1 a {
+    font-size: 70%;
+    font-weight: normal;
+  }
+
+#repos .repo {
+  margin: 0 0 1em 0;
+  padding: .1em .5em .1em .5em;
+}
+
+#repos .public {
+  border: 1px solid #d8d8d8;
+  background-color: #f0f0f0;
+}
+
+#repos .private {
+  border: 1px solid #f7ca75;
+  background-color: #fffeeb;
+}
+
+  #repos .repo .title {
+    overflow: hidden;
+  }
+
+    #repos .repo .title .path {
+      float: left;
+      font-size: 140%;
+    }
+
+      #repos .repo .title .path img {
+        vertical-align: middle;
+      }
+
+      #repos .repo .title .path .button {
+        margin-left: .25em;
+        vertical-align: -12%;
+      }
+
+      #repos .repo .title .path span a {
+        font-size: 75%;
+        font-weight: normal
+      }
+
+    #repos .repo .title .security {
+      float: right;
+      text-align: right;
+      font-weight: bold;
+      padding-top: .3em;
+    }
+
+      #repos .repo .title .security * {
+        vertical-align: middle;
+      }
+
+      #repos .repo .title .security img {
+        position: relative;
+        top: -1px;
+      }
+
+  #repos .repo .meta {
+    margin: .2em 0 0 0;
+    overflow: hidden;
+  }
+
+    #repos .repo .meta table {
+      float: left;
+      max-width: 48em;
+    }
+
+    #repos .repo .meta table td.label {
+      color: #888;
+      padding-right: .25em;
+      vertical-align: top;
+    }
+
+    #repos .repo .meta table td span.editarea input {
+      margin-top: .5em;
+      margin-right: .5em;
+    }
+
+    #repos .repo .meta table td textarea {
+      display: block;
+      clear: right;
+    }
+
+    #repos .repo .meta table td.url {
+      color: #4183c4; /* blue */
+    }
+
+    #repos .repo .meta table td.blank {
+      color: #bbb;
+    }
+
+/*****************************************************************************/
+/*
+/* File
+/*
+/*****************************************************************************/
+
+#files {
+
+}
+
+  #files .file {
+    border: 1px solid #dedede; /* gray */
+    font-family: Monaco, "Courier New", monospace;
+    margin-bottom: 1em;
+  }
+
+    #files .file.private {
+      border: 1px solid #f7ca75;
+    }
+
+    #files .file .meta {
+      overflow: hidden;
+      font-size: 90%;
+      padding: .5em 1em;
+      color: #666;
+      background-color: #eaeaea;
+      border-bottom: 1px solid #ddd;
+    }
+
+    #files .file.private .meta {
+      background-color: #fffeeb;
+      border-bottom: 1px solid #f7ca75;
+    }
+
+      #files .file .meta .name {
+        padding-top: .3em;
+      }
+
+      #files .file .meta .info {
+        float: left;
+        padding-top: .2em;
+      }
+
+        #files .file .meta .info span {
+          margin-right: 1em;
+        }
+
+      #files .file .meta .gravatar {
+        float: right;
+        padding: 1px;
+        background-color: white;
+        border: 1px solid #ccc;
+        margin-left: 1em;
+      }
+
+      #files .file .meta .date {
+        float: right;
+        padding-top: .2em;
+      }
+
+    #files .file .meta .actions {
+      float: right;
+      text-align: right;
+    }
+
+      #files .file .meta .actions a {
+        margin-left: 2em;
+      }
+
+      #files .file .meta .language {
+        float: right;
+        text-align: right;
+        font-family: helvetica, arial, clean, sans-serif;
+      }
+
+        #files .file .meta .language select {
+          font-family: arial, clean, sans-serif;
+        }
+
+        #files .file .meta .language .gist-lang-desc {
+          padding-top: .6em;
+        }
+
+      #files .file .data {
+        font-size: 80%;
+        overflow: auto;
+        background-color: #f8f8ff;
+      }
+
+      #files .file .input textarea {
+        font-family: 'Courier', monospace;
+        font-size: 90%;
+        margin: 1% 1.1% 1% 0.9%;
+        width: 98%;
+        height: 25em;
+      }
+
+      #files .file .input .remove {
+        font-size: 80%;
+        padding: 5px;
+        padding-top: 0;
+        text-align: right;
+      }
+
+      #files .file .removed {
+        padding: 5px;
+        color: #955;
+        text-align: center;
+      }
+
+    #files .image {
+      padding: 1.2em;
+      text-align: center;
+    }
+
+      #files .file .data pre {
+        font-family: 'Bitstream Vera Sans Mono', 'Courier', monospace;
+      }
+
+        #files .file .data .highlight {
+          padding: 1em 0;
+        }
+
+        #files .file .data .highlight .line {
+
+        }
+
+        #files .file .data .highlight div {
+          padding-left: 1em;
+        }
+
+        #files .file .data .line_numbers {
+          background-color: #ececec;
+          color: #aaa;
+          padding: 1em .5em;
+          border-right: 1px solid #ddd;
+          text-align: right;
+        }
+
+          #files .file .data .line_numbers span,
+          #files .file .data .line_numbers a {
+            color: #aaa;
+            cursor: pointer;
+          }
+
+  #files .bubble {
+    background: url(/images/modules/commit/comment_bubble.png) no-repeat;
+    color: white;
+    height: 1.4em;
+    margin: -0.2em 0 0 -9.6em;
+    padding: 0.1em 0.8em 0 0;
+    padding-left: 0 !important;
+    position: absolute;
+    width: 1.5em;
+    cursor: pointer;
+  }
+
+  #files .empty {
+    background: none;
+  }
+
+    #files .bubble span {
+      display: block;
+      line-height: 1.4em;
+      text-align: center;
+    }
+
+/*****************************************************************************/
+/*
+/* Add or Paste
+/*
+/*****************************************************************************/
+
+#add_or_paste {
+  overflow: hidden;
+}
+
+  #add_or_paste .add {
+    margin-top: .4em;
+    float: left;
+  }
+
+    #add_or_paste .add a {
+      text-decoration: underline;
+      font-size: 110%;
+    }
+
+  #add_or_paste .paste {
+    float: right;
+    text-align: right;
+  }
+
+/*****************************************************************************/
+/*
+/* Options
+/*
+/*****************************************************************************/
+
+#options {
+
+}
+
+  #options h3 {
+    border-bottom: 1px solid #bbb;
+    margin-bottom: .5em;
+  }
+
+  #options .private {
+    font-size: 110%;
+    color: #666;
+  }
+
+    #options .private input {
+      position: relative;
+      top: .05em;
+    }
+
+    #options .private img {
+      margin-right: .2em;
+    }
+
+/*****************************************************************************/
+/*
+/* New Gists
+/*
+/*****************************************************************************/
+
+#files .data .newGist { width: 100%; height: 300px;}
+#files .data .tags { width: 50%; }
+
+.gistSubmit { float: right; padding: 5px 10px }
+
+/*****************************************************************************/
+/*
+/* Instructions
+/*
+/*****************************************************************************/
+
+#instructions {
+
+}
+
+  #instructions h3 {
+    border-bottom: 1px solid #bbb;
+    margin-bottom: .5em;
+  }
+
+  #instructions .instruct {
+      padding: 5px 0;
+      color: #333;
+      border-bottom: 1px dashed #eee;
+  }
+
+/*****************************************************************************/
+/*
+/* Control
+/*
+/*****************************************************************************/
+
+#control {
+  margin-bottom: 2em;
+}
+
+/*****************************************************************************/
+/*
+/* Forks
+/*
+/*****************************************************************************/
+
+.fork-info {
+  margin-bottom: 1.5em;
+}
+
+  .fork-info h3 {
+    border-bottom: 1px solid #bbb;
+    margin-bottom: .2em;
+  }
+
+/*****************************************************************************/
+/*
+/* Owner
+/*
+/*****************************************************************************/
+
+#owner {
+  margin-bottom: 1.5em;
+}
+
+  #owner h3 {
+    border-bottom: 1px solid #bbb;
+    margin-bottom: .2em;
+  }
+
+    #owner p.claim {
+      font-style: italic;
+      color: #666;
+    }
+
+/*****************************************************************************/
+/*
+/* Revisions
+/*
+/*****************************************************************************/
+
+#revisions {
+
+}
+
+  #revisions h3 {
+    border-bottom: 1px solid #bbb;
+    margin-bottom: .5em;
+  }
+
+  #revisions ul {
+    list-style-type: none;
+  }
+
+    #revisions ul li {
+      padding: .1em .25em;
+    }
+
+    #revisions ul li.current {
+      border: 1px solid #9DFF9D;
+      background-color: #EBFFEB;
+    }
+
+    #revisions ul li * {
+      vertical-align: middle;
+    }
+
+    #revisions ul li img {
+      padding-right: 1px;
+    }
+
+    #revisions a.id {
+      font-family: Monaco, "Courier New", monospace;
+      font-size: 70%;
+    }
+
+    #revisions a.author {
+      color: black;
+      font-weight: bold;
+    }
+
+    #revisions span.date {
+      color: #777;
+    }
+
+/*****************************************************************************/
+/*
+/* Footer
+/*
+/*****************************************************************************/
+
+#footer {
+  height: 8.6em;
+  background: #bbccd9 url(/images/modules/footer/bg.png) 0 0 repeat-x;
+  overflow: hidden;
+  color: #cadcea;
+}
+
+  #footer a {
+    color: white;
+    text-decoration: underline;
+  }
+
+  #footer .info {
+    padding: 2.9em 0 3.3em 0;
+    float: left;
+  }
+
+    #footer .info .logo {
+      float: left;
+      margin-right: 1.5em;
+      margin-top: -.5em;
+    }
+
+    #footer .info .more {
+      float: left;
+    }
+
+      #footer .info .links {
+        padding-bottom: .4em;
+        border-bottom: 3px solid #5c8ab3;
+      }
+
+      #footer .info .company {
+        padding-top: .4em;
+      }
+
+  #footer .sponsor {
+    padding: 2.75em 0 1em 0;
+    float: right;
+    width: 20em;
+  }
+
+    #footer .sponsor img {
+      float: right;
+      margin: 0.4em 0 0 0.75em;
+    }
+
+    #footer .sponsor a {
+      text-decoration: none;
+    }
+
+    #footer .sponsor div {
+      text-align: right;
+      font-size: 0.9em;
+      margin-top: 0.7em;
+    }
+
+/*****************************************************************************/
+/*
+/* Login
+/*
+/*****************************************************************************/
+
+#login {
+  width: 31em;
+}
+
+/*****************************************************************************/
+/*
+/* Standard Form
+/*
+/*****************************************************************************/
+
+.standard_form {
+  margin: 3em auto 0 auto;
+  width: 60em;
+  background-color: #eaf2f5;
+  padding: 2em 2em 1em 2em;
+  border: 20px solid #ddd;
+}
+
+  .standard_form h1 {
+    font-size: 160%;
+    margin-bottom: 1em;
+  }
+
+    .standard_form h1 a {
+      font-size: 70%;
+      font-weight: normal;
+    }
+
+  .standard_form p {
+    margin: .5em 0;
+  }
+
+  .standard_form p.note {
+    color: #a00;
+  }
+
+  .standard_form form {
+
+  }
+
+    .standard_form form label,
+    .standard_form form .label {
+      font-size: 110%;
+      color: #666;
+      display: block;
+      margin: 0;
+      margin-top: 1em;
+    }
+
+      .standard_form form label a {
+        font-size: 90%;
+      }
+
+      .standard_form form label.error {
+        color: #a00;
+      }
+
+    .standard_form form .label label {
+      margin: 0;
+      color: black;
+      font-size: 95%;
+    }
+
+      .standard_form form .label span {
+        font-size: 90%;
+        color: #888;
+      }
+
+    .standard_form form input.text,
+    .standard_form form textarea {
+      padding: 5px;
+      border: 1px solid #888;
+    }
+
+      .standard_form form input.text {
+        font-size: 110%;
+      }
+
+      .standard_form form textarea {
+
+      }
+
+      .standard_form form input.submit {
+        font-size: 120%;
+        padding: .1em 1em;
+      }
+
+      .standard_form form label.error input.text,
+      .standard_form form label.error textarea {
+        border: 1px solid #a00;
+        background-color: #f2e1e1;
+      }
+
+/*****************************************************************************/
+/*
+/* Pagination
+/*
+/*****************************************************************************/
+
+.pagination {
+  padding: .3em;
+  margin: .3em;
+}
+
+.pagination a {
+  padding: .1em .3em;
+  margin: .2em;
+  border: 1px solid #aaaadd;
+  text-decoration: none;
+  color: #369;
+}
+
+.pagination a:hover, .pagination a:active {
+  border: 1px solid #369;
+  color: #000;
+}
+
+.pagination span.current {
+  padding: .1em .3em;
+  margin: .2em;
+  border: 1px solid #369;
+  font-weight: bold;
+  background-color: #369;
+  color: #FFF;
+}
+
+.pagination span.disabled {
+  padding: .1em .3em;
+  margin: .2em;
+  border: 1px solid #eee;
+  color: #ddd;
+}
+
+/*****************************************************************************/
+/*
+/* Readme
+/*
+/*****************************************************************************/
+
+#readme {
+  font: 13.34px helvetica, arial, clean, sans-serif;
+}
+
+  #readme.announce {
+    margin: 1em 0;
+  }
+
+  #readme.blob {
+  }
+
+  #readme span.name {
+    font-size: 140%;
+    padding: .8em 0;
+  }
+
+  /* box */
+
+  #readme div.plain,
+  #readme div.wikistyle {
+    background-color: #f8f8f8;
+    padding: .7em;
+  }
+
+  #readme.announce div.plain,
+  #readme.announce div.wikistyle {
+    border: 1px solid #e9e9e9;
+  }
+
+    #readme.blob div.plain,
+    #readme.blob div.wikistyle {
+      border-top: none;
+    }
+
+    /* plain formatting */
+
+    #readme div.plain pre {
+      font-family: 'Bitstream Vera Sans Mono', 'Courier', monospace;
+      font-size: 85%;
+      color: #444;
+    }
+
+/*****************************************************************************/
+/*
+/* Wiki Styles
+/*
+/*****************************************************************************/
+
+.wikistyle h1 {
+  font-size: 170%;
+  border-top: 4px solid #aaa;
+  padding-top: .5em;
+}
+
+.wikistyle h2 {
+  font-size: 150%;
+  margin-top: 1.5em;
+  border-top: 4px solid #e0e0e0;
+  padding-top: .5em;
+}
+
+.wikistyle h3 {
+  margin-top: 1em;
+}
+
+.wikistyle p {
+  margin: 1em 0;
+  line-height: 1.5em;
+}
+
+.wikistyle ul {
+  margin: 1em 0 1em 1em;
+}
+
+.wikistyle ol {
+  margin: 1em 0 1em 1.5em;
+}
+
+.wikistyle blockquote {
+  margin: 1em 0;
+  border-left: 5px solid #ddd;
+  padding-left: .6em;
+  color: #555;
+}
+
+.wikistyle table {
+  margin: 1em 0;
+}
+
+  .wikistyle table th {
+    border-bottom: 1px solid #bbb;
+    padding: .2em 1em;
+  }
+
+  .wikistyle table td {
+    border-bottom: 1px solid #ddd;
+    padding: .2em 1em;
+  }
+
+.wikistyle pre {
+  margin: 1em 0;
+  font-size: 90%;
+  background-color: #f8f8ff;
+  border: 1px solid #dedede;
+  padding: .5em;
+  line-height: 1.5em;
+  color: #444;
+}
+
+  .wikistyle pre code {
+    padding: 0;
+    font-size: 100%;
+    background-color: #f8f8ff;
+    border: none;
+  }
+
+.wikistyle code {
+  font-size: 90%;
+  background-color: #f8f8ff;
+  color: #444;
+  padding: 0 .2em;
+  border: 1px solid #dedede;
+}
+
+/* console */
+
+.wikistyle pre.console {
+  margin: 1em 0;
+  font-size: 90%;
+  background-color: black;
+  padding: .5em;
+  line-height: 1.5em;
+  color: white;
+}
+
+  .wikistyle pre.console code {
+    padding: 0;
+    font-size: 100%;
+    background-color: black;
+    border: none;
+    color: white;
+  }
+
+  .wikistyle pre.console span {
+    color: #888;
+  }
+
+  .wikistyle pre.console span.command {
+    color: yellow;
+  }

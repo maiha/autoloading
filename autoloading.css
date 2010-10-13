@@ -1,0 +1,22 @@
+div.autoloading
+{
+  position:absolute;
+  left: 0px;
+  z-index:999;
+  text-align:center;
+  width:200px;
+  padding: 5px 0 5px 0;
+  border:2px solid #CCC;
+  background-color: #FFF;
+}
+div.autoloading > div.title
+{
+  font-size:11px;
+  color:#000;
+
+}
+div.autoloading > div.state
+{
+  font-size:9px;
+  color:#666;
+}

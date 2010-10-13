@@ -1,0 +1,20 @@
+autloading
+==========
+
+A simple autoloading spiner with jQuery
+
+
+Usage
+=====
+
+  $('a.spiner').autoloading('#target');
+  $('a.spiner').click(function() {
+    $(this).data.autoloading.start('Now loading ...','in process');
+  });
+  $('a.stop').click(function(){$('a.spiner').data.autoloading.stop();});
+
+
+Author
+======
+
+  maiha@wota.jp
